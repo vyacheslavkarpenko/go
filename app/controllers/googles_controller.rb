@@ -10,13 +10,13 @@ class GooglesController < ApplicationController
     state = 'state=1234567890'
     h = { a: "a", b: "b", c: "c" }
     h[:a]
-
+    p "-------resp-------"
     @response = HTTParty.get(url + client_id + amp + nonce + amp + response_type + amp + redirect_uri + amp + scope + amp + state)
     @response
 
     p @response
     p "------@response---------"
-    
+
     Google.create(field_1: params)
 
     @google_resp = Google.all
