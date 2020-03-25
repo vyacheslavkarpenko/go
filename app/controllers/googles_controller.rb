@@ -33,4 +33,6 @@ class GooglesController < ApplicationController
     del = Google.all.each{|i| i.destroy}
     render json: {response: del }
   end
+
+  def random; end
 end
